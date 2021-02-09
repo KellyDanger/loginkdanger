@@ -1,4 +1,8 @@
-.loginForm {
+body {
+  color: #efeeeb;
+}
+
+.loginRegForm {
   background-color: #32363a;
   color: #efeeeb;
   width: 450px;
@@ -7,17 +11,30 @@
   margin-top: 150px;
 }
 
-.loginRegActive {
-  color: #efeeeb;
+.active {
+  color: #32363a;
   margin-top: 20px;
   background-color: #d1ce56;
 }
-.loginRegInactive {
+.inactive {
   color: #efeeeb;
   background-color: transparent;
   margin-top: 20px;
 }
 
-h1 {
-  font-weight: 100;
+h2 {
+  font-weight: 450;
+}
+input {
+  background-color: transparent;
+  margin: 5px;
+  width: 85%;
+  padding: 3px;
+}
+.inputs {
+
+}
+
+#firstName, #lastName {
+  width: 40%;
 }
