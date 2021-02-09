@@ -6,7 +6,6 @@ function App() {
     <div className="App">
       <div className="loginForm">
         <div>
-          <p>login form here</p>
           <Login/>
         </div>
       </div>

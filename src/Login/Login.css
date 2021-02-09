@@ -1,0 +1,23 @@
+.loginForm {
+  background-color: #32363a;
+  color: #efeeeb;
+  width: 450px;
+  height: 300px;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.loginRegActive {
+  color: #efeeeb;
+  margin-top: 20px;
+  background-color: #d1ce56;
+}
+.loginRegInactive {
+  color: #efeeeb;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+h1 {
+  font-weight: 100;
+}
