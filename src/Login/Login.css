@@ -30,10 +30,9 @@ input {
   margin: 5px;
   width: 85%;
   padding: 3px;
-}
-.inputs {
 
 }
+
 
 #firstName, #lastName {
   width: 40%;
