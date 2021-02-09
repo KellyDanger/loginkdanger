@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import './Login.css';
 
 class Login extends Component {
@@ -21,67 +24,83 @@ class Login extends Component {
     return (
       <>
       {this.state.register &&
-        <div className="loginRegForm">
-          <Button
-            className="active"
-            id="registerBtn"
-            variant="secondary"
-            onClick={() => this.toggleReg()}
-            disabled
-          >Register</Button>
-          <Button
-            className="inactive"
-            id="loginBtn"
-            variant="secondary"
-            onClick={() => this.toggleLogin()}
-          >Login</Button>
-          <h2>Sign Up for Free</h2>
-          <div className="inputs">
-          <div>
-            <input
-              className="regFormInput"
-              id="firstName"
-              type="text"
-              placeholder="First Name"
-            >
-            </input>
-            <input
-              className="regFormInput"
-              id="lastName"
-              type="text"
-              placeholder="Last Name"
-            >
-            </input>
-          </div>
-          <div>
-            <input
-              className="regFormInput"
-              id="email"
-              type="text"
-              placeholder="Email Address"
-            >
-            </input>
-          </div>
-          <div>
-            <input
-              className="regFormInput"
-              id="password"
-              type="password"
-              placeholder="Set a Password"
-            >
-            </input>
-          </div>
-          </div>
-          <Button
-            className="goBtn"
-            className="active"
-            id="getStartedBtn"
-            variant="primary"
-            onClick={() => this.submit()}
-          >
-            Get Started
-          </Button>
-        </div>
+        <Container className="loginRegForm">
+          {/* this is the login/register button row */}
+          <Col  lg={12}>
+            <Row>
+                <Button
+                  className="active"
+                  id="registerBtn"
+                  variant="secondary"
+                  onClick={() => this.toggleReg()}
+                  disabled
+                >Register</Button>
+                <Button
+                  className="inactive"
+                  id="loginBtn"
+                  variant="secondary"
+                  onClick={() => this.toggleLogin()}
+                >Login</Button>
+            </Row>
+            {/* end login/register row */}
+            {/* headline row */}
+            <Row>
+              <h2>Sign Up for Free</h2>
+            </Row>
+            {/* end headline row */}
+            {/* name input row */}
+            <Row className="inputs">
+                  <input
+                    className="regFormInput"
+                    id="firstName"
+                    type="text"
+                    placeholder="First Name"
+                  >
+                  </input>
+                  <input
+                    className="regFormInput"
+                    id="lastName"
+                    type="text"
+                    placeholder="Last Name"
+                  >
+                  </input>
+            </Row>
+            {/* end name input row */}
+            {/* email input row */}
+            <Row> 
+                  <input
+                    className="regFormInput"
+                    id="email"
+                    type="text"
+                    placeholder="Email Address"
+                  >
+                  </input>
+            </Row>
+            {/* end email input row */}
+            {/* password input row */}
+            <Row>
+                  <input
+                    className="regFormInput"
+                    id="password"
+                    type="password"
+                    placeholder="Set a Password"
+                  >
+                  </input>
+            </Row>
+            {/* end password input row */}
+            {/* go button row */}
+            <Row>
+              <Button
+                id="getStartedBtn"
+                variant="primary"
+                onClick={() => this.submit()}
+              >
+                GET STARTED
+              </Button>
+            </Row>
+            {/* end go button row */}
+            </Col>
+        </Container>
       }
       </>
     )

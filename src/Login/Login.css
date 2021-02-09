@@ -6,15 +6,37 @@ body {
   background-color: #32363a;
   color: #efeeeb;
   width: 450px;
-  height: 300px;
+  height: auto;
   margin: auto;
   margin-top: 150px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px #747272D5;
 }
-
+.btn-secondary {
+  border: 1px solid #d1ce56;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px !important;
+  width: 42.5%;
+  padding: 5px;
+  font-size: 11px;
+}
+.btn-primary {
+  border: 1px solid #d1cd56;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 25px !important;
+  font-weight: 400 !important;
+  color: #32363a;
+  margin: 20px 0px 20px 0px;
+  width: 85%;
+  height: 40px;
+  background-color: #d1ce56;
+  border: 1px solid yellow;
+}
 .active {
   color: #32363a;
   margin-top: 20px;
   background-color: #d1ce56;
+  border: 1px solid yellow;
 }
 .inactive {
   color: #efeeeb;
@@ -28,12 +50,15 @@ h2 {
 input {
   background-color: transparent;
   margin: 5px;
-  width: 85%;
-  padding: 3px;
-
+  padding: 5px;
+  border: 1px solid blue;
+  font-size: 11px;
+}
+.nameInputs {
+  width: 100%;
 }
 
-
-#firstName, #lastName {
-  width: 40%;
+#firstName {
+  border-color: red;
+  margin-right: 5px;
 }
