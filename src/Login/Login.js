@@ -25,8 +25,8 @@ class Login extends Component {
       <>
       {this.state.register &&
         <Container className="loginRegForm">
+          <Col lg={12}>
           {/* this is the login/register button row */}
-          <Col  lg={12}>
             <Row>
                 <Button
                   className="active"
@@ -45,25 +45,25 @@ class Login extends Component {
             {/* end login/register row */}
             {/* headline row */}
             <Row>
-              <h2>Sign Up for Free</h2>
+              <h2>Sign Up for Free.</h2>
             </Row>
             {/* end headline row */}
             {/* name input row */}
-            <Row className="inputs">
-                  <input
-                    className="regFormInput"
-                    id="firstName"
-                    type="text"
-                    placeholder="First Name"
-                  >
-                  </input>
-                  <input
-                    className="regFormInput"
-                    id="lastName"
-                    type="text"
-                    placeholder="Last Name"
-                  >
-                  </input>
+            <Row className="nameInputs">
+                <input
+                  className="regFormInput"
+                  id="firstName"
+                  type="text"
+                  placeholder="First Name"
+                >
+                </input>
+                <input
+                  className="regFormInput"
+                  id="lastName"
+                  type="text"
+                  placeholder="Last Name"
+                >
+                </input>
             </Row>
             {/* end name input row */}
             {/* email input row */}
@@ -99,7 +99,7 @@ class Login extends Component {
               </Button>
             </Row>
             {/* end go button row */}
-            </Col>
+          </Col>
         </Container>
       }
       </>

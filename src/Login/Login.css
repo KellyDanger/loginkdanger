@@ -27,10 +27,9 @@ body {
   font-weight: 400 !important;
   color: #32363a;
   margin: 20px 0px 20px 0px;
-  width: 85%;
+  width: 85% !important;
   height: 40px;
   background-color: #d1ce56;
-  border: 1px solid yellow;
 }
 .active {
   color: #32363a;
@@ -49,16 +48,17 @@ h2 {
 }
 input {
   background-color: transparent;
-  margin: 5px;
+  margin: 5px 0px 5px 0px;
   padding: 5px;
-  border: 1px solid blue;
+  border: 1px solid #efeeeb;
   font-size: 11px;
-}
-.nameInputs {
-  width: 100%;
+  width: 85%;
 }
 
 #firstName {
-  border-color: red;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+#firstName, #lastName {
+  width: 40%;
+  border: 1px solid #efeeeb !important;
 }
