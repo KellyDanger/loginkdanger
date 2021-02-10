@@ -56,18 +56,24 @@ input {
   width: 393px;
   color: #efeeeb;
   height: 8px;
-}
+} */
+
 input::placeholder {
   color: #efeeeb5E;
 }
 
 #firstName {
-  margin-right: 7px;
+  margin-right: 7px !important;
 }
+
 #firstName, #lastName {
   width: 185px !important;
   border: 1px solid #efeeeb !important;
 }
-input:invalid {
+
+.was-validated:invalid, .was-validated:invalid {
+  border: 1px solid #fb5a34 !important;
+}
+.was-validated:invalid {
   border: 1px solid #fb5a34;
 }
