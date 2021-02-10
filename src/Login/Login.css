@@ -71,9 +71,10 @@ input::placeholder {
   border: 1px solid #efeeeb !important;
 }
 
-.was-validated:invalid, .was-validated:invalid {
+#firstName:invalid, #lastName:invalid {
   border: 1px solid #fb5a34 !important;
 }
-.was-validated:invalid {
+input:invalid {
   border: 1px solid #fb5a34;
 }
+
