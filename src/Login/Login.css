@@ -37,7 +37,6 @@ body {
   color: #32363a;
   margin-top: 20px;
   background-color: #d1ce56;
-  border: 1px solid yellow;
 }
 .inactive {
   color: #efeeeb;
@@ -56,6 +55,7 @@ input {
   font-size: 10px;
   width: 393px;
   color: #efeeeb;
+  height: 8px;
 }
 input::placeholder {
   color: #efeeeb5E;
@@ -67,4 +67,7 @@ input::placeholder {
 #firstName, #lastName {
   width: 185px !important;
   border: 1px solid #efeeeb !important;
+}
+input:invalid {
+  border: 1px solid #fb5a34;
 }
