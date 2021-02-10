@@ -27,7 +27,7 @@ class Login extends Component {
         <Container className="loginRegForm">
           {/* this is the login/register button row */}
             <Row>
-              <Col sm>
+              <Col>
                 <Button
                   className="active"
                   id="registerBtn"
@@ -51,22 +51,20 @@ class Login extends Component {
             {/* end headline row */}
             {/* name input row */}
             <Row>
-              <Col sm>
                 <input
                   className="regFormInput"
+                  id="firstName"
                   type="text"
                   placeholder="First Name"
                 >
                 </input>
-              </Col>
-              <Col sm>
                 <input
                   className="regFormInput"
+                  id="lastName"
                   type="text"
                   placeholder="Last Name"
                 >
                 </input>
-              </Col>
             </Row>
             {/* end name input row */}
             {/* email input row */}

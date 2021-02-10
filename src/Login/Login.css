@@ -10,24 +10,27 @@ body {
   margin-top: 150px;
   border-radius: 5px;
   box-shadow: 2px 2px 4px 2px #747272D5;
+  padding: 20px;
 }
 .btn-secondary {
   border: 1px solid #d1ce56;
   font-family: 'Rajdhani', sans-serif;
+  font-weight: 400 !important;
   font-size: 15px !important;
-  width: 42.5%;
+  width: 46%;
   padding: 5px;
   font-size: 11px;
 }
 .btn-primary {
   border: 1px solid #d1cd56;
   font-family: 'Rajdhani', sans-serif;
-  font-size: 25px !important;
+  font-size: 30px !important;
   font-weight: 400 !important;
+  letter-spacing: 2px;
   color: #32363a;
   margin: 20px 0px 20px 0px;
-  width: 85% !important;
-  height: 40px;
+  width: 92% !important;
+  height: 55px;
   background-color: #d1ce56;
 }
 .active {
@@ -39,7 +42,7 @@ body {
 .inactive {
   color: #efeeeb;
   background-color: transparent;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 h2 {
@@ -48,16 +51,20 @@ h2 {
 input {
   background-color: transparent;
   margin: 5px 0px 5px 0px;
-  padding: 5px;
+  padding: 7px;
   border: 1px solid #efeeeb;
-  font-size: 11px;
-  width: 368px;
+  font-size: 10px;
+  width: 393px;
+  color: #efeeeb;
+}
+input::placeholder {
+  color: #efeeeb5E;
 }
 
 #firstName {
-  margin-right: 10px;
+  margin-right: 7px;
 }
 #firstName, #lastName {
-  width: 40%;
+  width: 185px !important;
   border: 1px solid #efeeeb !important;
 }
