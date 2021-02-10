@@ -25,9 +25,9 @@ class Login extends Component {
       <>
       {this.state.register &&
         <Container className="loginRegForm">
-          <Col lg={12}>
           {/* this is the login/register button row */}
             <Row>
+              <Col sm>
                 <Button
                   className="active"
                   id="registerBtn"
@@ -41,65 +41,71 @@ class Login extends Component {
                   variant="secondary"
                   onClick={() => this.toggleLogin()}
                 >Login</Button>
+              </Col>
             </Row>
             {/* end login/register row */}
             {/* headline row */}
             <Row>
-              <h2>Sign Up for Free.</h2>
+                <h2>Sign Up for Free.</h2>
             </Row>
             {/* end headline row */}
             {/* name input row */}
-            <Row className="nameInputs">
+            <Row>
+              <Col sm>
                 <input
                   className="regFormInput"
-                  id="firstName"
                   type="text"
                   placeholder="First Name"
                 >
                 </input>
+              </Col>
+              <Col sm>
                 <input
                   className="regFormInput"
-                  id="lastName"
                   type="text"
                   placeholder="Last Name"
                 >
                 </input>
+              </Col>
             </Row>
             {/* end name input row */}
             {/* email input row */}
             <Row> 
+              <Col>
                   <input
                     className="regFormInput"
-                    id="email"
                     type="text"
                     placeholder="Email Address"
                   >
                   </input>
+              </Col>
             </Row>
             {/* end email input row */}
             {/* password input row */}
             <Row>
+              <Col sm>
                   <input
                     className="regFormInput"
-                    id="password"
                     type="password"
                     placeholder="Set a Password"
                   >
                   </input>
+              </Col>
             </Row>
             {/* end password input row */}
             {/* go button row */}
             <Row>
-              <Button
-                id="getStartedBtn"
-                variant="primary"
-                onClick={() => this.submit()}
-              >
-                GET STARTED
-              </Button>
+              <Col sm>
+                <Button
+                  id="getStartedBtn"
+                  variant="primary"
+                  onClick={() => this.submit()}
+                >
+                  GET STARTED
+                </Button>
+              </Col>
             </Row>
             {/* end go button row */}
-          </Col>
         </Container>
       }
       </>

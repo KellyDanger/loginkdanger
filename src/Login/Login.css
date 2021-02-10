@@ -6,7 +6,6 @@ body {
   background-color: #32363a;
   color: #efeeeb;
   width: 450px;
-  height: auto;
   margin: auto;
   margin-top: 150px;
   border-radius: 5px;
@@ -52,7 +51,7 @@ input {
   padding: 5px;
   border: 1px solid #efeeeb;
   font-size: 11px;
-  width: 85%;
+  width: 368px;
 }
 
 #firstName {
