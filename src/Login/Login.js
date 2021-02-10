@@ -12,9 +12,17 @@ class Login extends Component {
   };
   toggleReg = () => {
     console.log('REGISTER');
+    this.setState({
+      register: true,
+      login: false,
+    })
   };
   toggleLogin = () => {
     console.log('LOGIN');
+    this.setState({
+      register: false,
+      login: true,
+    })
   }
   submit = () => {
     console.log('SUBMIT');
@@ -23,17 +31,16 @@ class Login extends Component {
   render() {
     return (
       <>
-      {this.state.register &&
         <Container className="loginRegForm">
           {/* this is the login/register button row */}
             <Row>
+              {this.state.register ?
               <Col>
                 <Button
                   className="active"
                   id="registerBtn"
                   variant="secondary"
                   onClick={() => this.toggleReg()}
-                  disabled
                 >Register</Button>
                 <Button
                   className="inactive"
@@ -42,30 +49,54 @@ class Login extends Component {
                   onClick={() => this.toggleLogin()}
                 >Login</Button>
               </Col>
+              :
+              <Col>
+                <Button
+                className="inactive"
+                id="registerBtn"
+                variant="secondary"
+                onClick={() => this.toggleReg()}
+              >Register</Button>
+              <Button
+                className="active"
+                id="loginBtn"
+                variant="secondary"
+                onClick={() => this.toggleLogin()}
+              >Login</Button>
+              </Col>
+              }
             </Row>
             {/* end login/register row */}
             {/* headline row */}
-            <Row>
+            {this.state.register ?
+              <Row>
                 <h2>Sign Up for Free.</h2>
-            </Row>
+              </Row>
+              :
+              <Row>
+                <h2>Welcome Back!</h2>
+              </Row>   
+            }
             {/* end headline row */}
             {/* name input row */}
-            <Row>
-                <input
-                  className="regFormInput"
-                  id="firstName"
-                  type="text"
-                  placeholder="First Name"
-                >
-                </input>
-                <input
-                  className="regFormInput"
-                  id="lastName"
-                  type="text"
-                  placeholder="Last Name"
-                >
-                </input>
-            </Row>
+            {this.state.register &&
+              <Row>
+                  <input
+                    className="regFormInput"
+                    id="firstName"
+                    type="text"
+                    placeholder="First Name"
+                  >
+                  </input>
+                  <input
+                    className="regFormInput"
+                    id="lastName"
+                    type="text"
+                    placeholder="Last Name"
+                  >
+                  </input>
+              </Row>
+            }
             {/* end name input row */}
             {/* email input row */}
             <Row> 
@@ -94,6 +125,7 @@ class Login extends Component {
             {/* go button row */}
             <Row>
               <Col sm>
+              {this.state.register ?
                 <Button
                   id="getStartedBtn"
                   variant="primary"
@@ -101,11 +133,19 @@ class Login extends Component {
                 >
                   GET STARTED
                 </Button>
+                :
+                <Button
+                  id="getStartedBtn"
+                  variant="primary"
+                  onClick={() => this.submit()}
+                >
+                  LOG IN
+                </Button>
+              }
               </Col>
             </Row>
             {/* end go button row */}
         </Container>
-      }
       </>
     )
   }
