@@ -9,6 +9,10 @@ class Login extends Component {
   state = {
     register: true,
     login: false,
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
   };
   toggleReg = () => {
     console.log('REGISTER');
@@ -24,8 +28,15 @@ class Login extends Component {
       login: true,
     })
   }
+  handleChange = (event, param) => {
+    this.setState({
+      [param]: event.target.value
+    })
+    console.log(event.target.value, this.state)
+  }
+
   submit = () => {
-    console.log('SUBMIT');
+    console.log('SUBMIT', this.state);
   }
 
   render() {
@@ -86,6 +97,7 @@ class Login extends Component {
                     id="firstName"
                     type="text"
                     placeholder="First Name"
+                    onChange={(event) => this.handleChange(event, "firstName")}
                   >
                   </input>
                   <input
@@ -93,6 +105,7 @@ class Login extends Component {
                     id="lastName"
                     type="text"
                     placeholder="Last Name"
+                    onChange={(event) => this.handleChange(event, "lastName")}
                   >
                   </input>
               </Row>
@@ -103,8 +116,10 @@ class Login extends Component {
               <Col>
                   <input
                     className="regFormInput"
+                    id="email"
                     type="text"
                     placeholder="Email Address"
+                    onChange={(event) => this.handleChange(event, "email")}
                   >
                   </input>
               </Col>
@@ -115,8 +130,10 @@ class Login extends Component {
               <Col sm>
                   <input
                     className="regFormInput"
+                    id="password"
                     type="password"
                     placeholder="Set a Password"
+                    onChange={(event) => this.handleChange(event, "password")}
                   >
                   </input>
               </Col>
